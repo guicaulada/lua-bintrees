@@ -1,5 +1,5 @@
 package = "bintrees"
-version = "1.1-3"
+version = "1.2-1"
 source = {
    url = "git+https://github.com/guicaulada/lua-bintrees.git"
 }

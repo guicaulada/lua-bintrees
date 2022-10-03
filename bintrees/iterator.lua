@@ -60,7 +60,7 @@ function Iterator:prev()
       self:maxNode(root)
     end
   else
-    if self.cursor.left ~= nil then
+    if self.cursor.left == nil then
       local save = nil
       repeat
         save = self.cursor
