@@ -1,6 +1,6 @@
-local TreeBase = require('lib/bintrees/treebase')
-local Node = require('lib/bintrees/node')
-local BinTree = {}
+local TreeBase = require('lib/treebase')
+local Node = require('lib/node')
+local BinTree = TreeBase:new()
 
 function BinTree:new(comparator)
   local o = TreeBase:new()

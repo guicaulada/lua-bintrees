@@ -1,7 +1,7 @@
-local TreeBase = require('lib/bintrees/treebase')
-local Node = require('lib/bintrees/node')
-local RBNode = {}
-local RBTree = {}
+local TreeBase = require('lib/treebase')
+local Node = require('lib/node')
+local RBNode = Node:new()
+local RBTree = TreeBase:new()
 
 local function isRed(node)
   return node ~= nil and node.red
