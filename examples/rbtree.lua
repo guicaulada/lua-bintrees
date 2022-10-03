@@ -1,4 +1,4 @@
-local Tree = require('..').RBTree;
+local Tree = require('bintrees.rbtree');
 
 -- create a new tree, pass in the compare function
 local tree = Tree:new(function(a, b) return a - b end);
