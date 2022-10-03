@@ -30,7 +30,7 @@ tree:insert(2);
 tree:insert(-3);
 ```
 
-see examples/rbtree.lua for more info
+see [examples/rbtree.lua](./examples/rbtree.lua) for more info
 
 Constructor
 ------------
