@@ -1,10 +1,12 @@
 local Iterator = require('bintrees.iterator')
 local TreeBase = {}
 
-function TreeBase:new()
+function TreeBase:new(comparator)
+
   local o = {}
   setmetatable(o, self)
   self.__index = self
+  o.comparator = comparator
   return o
 end
 
@@ -73,8 +75,8 @@ end
 
 -- returns an iterator to the tree node immediately after the item
 function TreeBase:upperBound(item)
-  local iter = self.lowerBound(item)
-  while (iter.data ~= nil and self.comparator(iter.data, item) == 0) do
+  local iter = self:lowerBound(item)
+  while (iter:data() ~= nil and self.comparator(iter:data(), item) == 0) do
     iter:next()
   end
 

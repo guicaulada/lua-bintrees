@@ -3,11 +3,10 @@ local Node = require('bintrees.node')
 local BinTree = TreeBase:new()
 
 function BinTree:new(comparator)
-  local o = TreeBase:new()
+  local o = TreeBase:new(comparator)
   setmetatable(o, self)
   self.__index = self
   o.root = nil
-  o.comparator = comparator
   o.size = 0
   return o
 end

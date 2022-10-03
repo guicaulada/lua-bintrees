@@ -37,7 +37,7 @@ function Iterator:next()
           self.cursor = nil
           break
         end
-      until self.cursor.right == save
+      until self.cursor.right ~= save
     else
       table.insert(self.ancestors, self.cursor)
       self:minNode(self.cursor.right)
@@ -70,7 +70,7 @@ function Iterator:prev()
           self.cursor = nil
           break
         end
-      until self.cursor.left == save
+      until self.cursor.left ~= save
     else
       table.insert(self.ancestors, self.cursor)
       self:maxNode(self.cursor.left)
