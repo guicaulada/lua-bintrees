@@ -1,5 +1,5 @@
 package = "bintrees"
-version = "1.1-2"
+version = "1.1-3"
 source = {
    url = "git+https://github.com/guicaulada/lua-bintrees.git"
 }
@@ -12,11 +12,10 @@ description = {
 build = {
    type = "builtin",
    modules = {
-      ["bintrees"] = "init.lua",
-      ["bintrees.bintree"] = "lib/bintree.lua",
-      ["bintrees.iterator"] = "lib/iterator.lua",
-      ["bintrees.node"] = "lib/node.lua",
-      ["bintrees.rbtree"] = "lib/rbtree.lua",
-      ["bintrees.treebase"] = "lib/treebase.lua"
+      ["bintrees.bintree"] = "bintrees/bintree.lua",
+      ["bintrees.iterator"] = "bintrees/iterator.lua",
+      ["bintrees.node"] = "bintrees/node.lua",
+      ["bintrees.rbtree"] = "bintrees/rbtree.lua",
+      ["bintrees.treebase"] = "bintrees/treebase.lua"
    }
 }
